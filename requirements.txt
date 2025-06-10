@@ -2,6 +2,7 @@ streamlit
 openai
 google-generativeai
 langchain
+langchain-community
 faiss-cpu
 tiktoken
 langchain-google-genai
