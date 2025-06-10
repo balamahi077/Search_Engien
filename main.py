@@ -1,5 +1,5 @@
 import streamlit as st
-import openai
+from openai import OpenAI
 import google.generativeai as genai
 import os
 from langchain.vectorstores import FAISS
@@ -41,7 +41,7 @@ def search_index(query, index):
     return index.similarity_search(query, k=3)
 
 def ask_openai(query, context=""):
-    client = openai(api_key=openai_api_key)
+    client = OpenAI(api_key=openai_api_key)
     messages = [
         {"role": "system", "content": "You are a helpful assistant."},
     ] + st.session_state.chat_history + [
