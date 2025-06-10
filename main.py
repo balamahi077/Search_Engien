@@ -60,7 +60,7 @@ def ask_openai(query, context=""):
 
 def ask_gemini(query):
     genai.configure(api_key=gemini_api_key)
-    model = genai.GenerativeModel("gemini-1.5-pro")  # Use the appropriate model name
+    model = genai.GenerativeModel("gemini-1.5-flash")  # Use the appropriate model name
 
     # Prepare chat history in the expected format
     history = []
